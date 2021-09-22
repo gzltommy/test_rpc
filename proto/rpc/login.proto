@@ -1,0 +1,24 @@
+// login.proto
+syntax = "proto3";
+
+package rpc; // 可以理解为 proto 文件自身的一个命名空间，用在不同 proto 文件之间相互引用的时候（本文用例没用到）
+
+option go_package = "test_rpc/proto/rpc"; // 生成的 go 代码的包导入路径
+
+//定义rpc服务
+//此处rpc服务的定义，一定要从服务端的角度考虑，即接受请求，处理请求并返回响应的一端
+//请求接受一个LoginReq（username+password)
+//响应回发一条msg（"true" or "false")
+service Login {
+    rpc Login (LoginReq) returns (LoginRes) {
+    }
+}
+
+message LoginReq {
+    string username = 1;
+    string password = 2;
+}
+
+message LoginRes {
+    string msg = 1;
+}
