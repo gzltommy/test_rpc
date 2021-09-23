@@ -1,4 +1,4 @@
-module test_rpc
+module test_grpc
 
 go 1.13
 

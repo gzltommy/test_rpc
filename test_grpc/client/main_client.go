@@ -5,7 +5,7 @@ import (
 	"context"
 	"google.golang.org/grpc"
 	"log"
-	"test_rpc/proto/rpc"
+	"test_grpc/proto/rpc"
 	"time"
 )
 
@@ -69,7 +69,7 @@ func Upload(grpcConn *grpc.ClientConn) {
 	// 循环处理数据，当大于 64kb 退出
 	for {
 		err := uploadClient.Send(&rpc.UploadReq{
-			Path:   "../test_rpc.txt",
+			Path:   "../test_grpc.txt",
 			Offset: offset,
 			Size:   size,
 			Data:   nil,
@@ -100,7 +100,7 @@ func Download(grpcConn *grpc.ClientConn) {
 
 	//和简单rpc不同，此时获得的不是res，而是一个client的对象，通过这个连接对象去读取数据
 	downloadClient, err := client.Download(ctx, &rpc.DownloadReq{
-		Path:   "../test_rpc.txt",
+		Path:   "../test_grpc.txt",
 		Offset: 0,
 		Size:   64 * 1024,
 	})

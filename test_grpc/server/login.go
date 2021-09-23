@@ -4,7 +4,7 @@ package main
 
 import (
 	"context"
-	"test_rpc/proto/rpc"
+	"test_grpc/proto/rpc"
 )
 
 type LoginServer struct{}

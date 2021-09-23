@@ -3,7 +3,7 @@
 package main
 
 import (
-	"test_rpc/proto/rpc"
+	"test_grpc/proto/rpc"
 )
 
 type DownloadServer struct{}

@@ -1,4 +1,4 @@
-# test_rpc
+# test_grpc
 测试 grpc
 
 gRPC 基于 HTTP2 标准设计，所以相对于其他 RPC 框架，gRPC 带来了更多强大功能，如双向流、头部压缩、多复用请求等。

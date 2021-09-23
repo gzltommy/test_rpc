@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc/reflection"
 	"log"
 	"net"
-	"test_rpc/proto/rpc"
+	"test_grpc/proto/rpc"
 )
 
 func main() {
