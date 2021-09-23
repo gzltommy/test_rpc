@@ -15,6 +15,6 @@ proto:
 
 .PHONY: build
 build: proto
-	go build -o server ./clent/*.go
-	go build -o client ./server/*.go
+	cd client && go build -o client *.go && cd - &> /dev/null
+	cd server && go build -o server *.go && cd - &> /dev/null
 
