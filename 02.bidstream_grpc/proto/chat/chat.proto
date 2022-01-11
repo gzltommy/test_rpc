@@ -8,7 +8,7 @@ package chat;
 /*
     服务名: Chat，
     其中只有 名为“BidStream”的一个RPC服务，
-    输入是 Request格式的数据流， 输出是 Response 格式的数据流
+    输入是 Request 格式的数据流， 输出是 Response 格式的数据流
 */
 
 option go_package = "bidstream_grpc/proto/chat";
