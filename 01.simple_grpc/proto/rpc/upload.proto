@@ -6,7 +6,7 @@ package rpc; // 可以理解为 proto 文件自身的一个命名空间，用在
 
 option go_package = "simple/proto/rpc"; // 生成的 go 代码的包导入路径
 
-//下载服务
+//上传服务
 //请求接受一个UploadReq
 //响应回发多条数据（"true" or "false")
 service Upload {
